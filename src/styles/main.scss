@@ -1,0 +1,17 @@
+$bg: rgb(0, 157, 255);
+
+.box {
+    background-color: $bg;
+    &__title {
+        color: red;
+    }
+    &__image {
+        max-width: 200px;
+    }
+    &__svg {
+        fill: green;
+        &:hover {
+            fill: gold;
+        }
+    }
+}
