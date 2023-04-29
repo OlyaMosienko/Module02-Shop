@@ -280,45 +280,106 @@ body {
     overflow: initial;
     &-slide {
         border: 1px solid rgba($green, 0.4);
-        border-radius: 15px;
-        width: 466px;
+        border-radius: 2rem;
+        padding: 4rem 3.7rem;
+        box-sizing: border-box;
         height: 520px;
-    }
-    &-slide:hover {
-        border: 3px solid rgba($green, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+            .swiper-slide__hover {
+                height: 233px;
+                opacity: 1;
+            }
+            &::after {
+                content: '';
+                background-color: rgba($white, 0.55);
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                border-radius: 2rem;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                z-index: -1;
+            }
+        }
+        &_milk {
+            background-image: url(../images/milk.png);
+        }
+        &_pasta {
+            background-image: url(../images/pasta.png);
+        }
+        &_steaks {
+            background-image: url(../images/steaks.png);
+        }
+        &__title {
+            font-family: $font-cormorant;
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+        &__hover {
+            height: 0;
+            opacity: 0;
+        }
+        &__text {
+            color: rgba($green, 0.7);
+            line-height: 1.5;
+            max-width: 263px;
+            margin-top: 2.5rem;
+            margin-bottom: 3.4rem;
+        }
+        &__link {
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: $green;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            letter-spacing: 0.1rem;
+            opacity: .8;
+            &:hover {
+                opacity: 1;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background-image: url(../images/plus.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
     }
     &-pagination {
         display: none;
     }
     &-button-next, &-button-prev {
         top: -60px;
-        &::after {
-            color: $green;
-            font-size: initial;
+        &:hover {
+            &::after {
+                color: rgba($green, 1)
+            }
         }
+        &::after {
+            color: rgba($green, .4);
+            font-size: 20px;
+        }
+    }
+    &-button-next {
+        right: -8px;
     }
     &-button-prev {
         left: initial;
-        right: 40px;
-    }
-}
-.swiper-slide {
-    &__title {
-        font-family: $font-cormorant;
-        font-weight: 700;
-        font-size: 3rem;
-    }
-    &__text {
-        font-family: $font-jost;
-        font-size: 1.6rem;
-        max-width: 275px;
-    }
-    &__link {
-        font-family: $font-jost;
-        font-weight: 500;
-        font-size: 1.6rem;
-        color: $green;
-        text-decoration: none;
-        text-transform: uppercase;
+        right: 72px;
     }
 }
