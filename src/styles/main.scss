@@ -265,7 +265,7 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     padding-top: 2rem;
-    padding-bottom: 200px;
+    padding-bottom: 12.8rem;
     &__text {
         margin-top: 6rem;
         max-width: 700px;
@@ -381,5 +381,61 @@ body {
     &-button-prev {
         left: initial;
         right: 72px;
+    }
+}
+.about {
+    padding-top: 32px;
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 7rem;
+    }
+    &__text {
+        margin-left: 122px;
+        flex-basis: 620px;
+    }
+    &__list {
+        list-style: none;
+        font-family: $font-cormorant;
+        font-size: 3rem;
+        font-style: italic;
+        display: flex;
+        gap: 9rem;
+        padding-left: 0;
+        margin: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 84px;
+            height: 84px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 1px solid rgba($green, .4);
+            border-radius: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url(../images/fruits.svg);
+                background-size: 44px 41px;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                background-image: url(../images/traditional.svg);
+                background-size: 40px 40px;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url(../images/good.svg);
+                background-size: 45px 39px;
+            }
+        }
     }
 }
