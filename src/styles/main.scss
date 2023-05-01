@@ -270,10 +270,11 @@ body {
         margin-top: 6rem;
         max-width: 700px;
     }
-    &__slider {
-        overflow: hidden;
-        padding-top: 100px;
-    }
+}
+
+.slider {
+    overflow: hidden;
+    padding-top: 100px;
 }
 
 .swiper {
@@ -286,28 +287,34 @@ body {
         height: 520px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         z-index: 0;
-        &:hover {
-            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
-            .swiper-slide__hover {
+        &_white {
+            justify-content: flex-end;
+            &:hover {
+                .swiper-slide__hover {
                 height: 233px;
                 opacity: 1;
+                }
+                &::after {
+                    content: '';
+                    background-color: rgba($white, 0.55);
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    border-radius: 2rem;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    z-index: -1;
+                }
             }
-            &::after {
-                content: '';
-                background-color: rgba($white, 0.55);
-                width: calc(100% - 4px);
-                height: calc(100% - 4px);
-                border-radius: 2rem;
-                position: absolute;
-                top: 2px;
-                left: 2px;
-                z-index: -1;
-            }
+        }
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+            
         }
         &_milk {
             background-image: url(../images/milk.png);
@@ -359,7 +366,23 @@ body {
                 background-repeat: no-repeat;
             }
         }
+        &__cover {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 293px;
+            text-align: center;
+        }
+        &__image {
+            height: 100%;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
+
     &-pagination {
         display: none;
     }
@@ -383,8 +406,44 @@ body {
         right: 72px;
     }
 }
+
+.counter {
+    display: flex;
+    &__btn {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $green;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 100%;
+        background-position: center center;
+    }
+    &__minus {
+        pointer-events: none;
+        background-image: url(../images/minus-counter.svg);
+        background-size: 20px 11px;
+        background-repeat: no-repeat;
+        opacity: .4;
+    }
+    &__plus {
+        pointer-events: none;
+        background-image: url(../images/plus-counter.svg);
+        background-size: 20px 11px;
+        background-repeat: no-repeat;
+    }
+    &__input {
+        text-align: center;
+        font-size: 2.4rem;
+        width: 46px;
+        border: none;
+        padding: 0;
+    }
+}
+
 .about {
     padding-top: 32px;
+    margin-bottom: 160px;
     &__box {
         display: flex;
         align-items: center;
