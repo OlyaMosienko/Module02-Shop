@@ -257,6 +257,7 @@ body {
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
+    border: none;
     &_min {
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
@@ -630,5 +631,68 @@ body {
             background-size: cover;
             background-repeat: no-repeat;
         }
+    }
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__text {
+            max-width: 400px;
+            flex-grow: 1;
+        }
+        &__form {
+            flex-basis: 589px;
+        }
+    }
+}
+
+.card {
+    padding: 3.8rem 5.2rem 4rem;
+    border: 2px solid rgba($green, .4);
+    border-radius: 2rem;
+    &__title {
+        font-size: 3rem;
+        font-family: $font-cormorant;
+        margin-top: 0;
+    }
+    &__label {
+        font-size: 1.2rem;
+        margin-left: 0.6rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+    &__input {
+        border: 1px solid rgba($green, .4);
+        border-radius: 2rem;
+        padding: 2.2rem 3rem;
+        margin-bottom: 2.8rem;
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+    }
+    &__check {
+        font-size: 1.2rem;
+        color: rgba($green, 0.6);
+        line-height: 1.5;
+        max-width: 360px;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+    }
+    &__link {
+        margin-top: 1.2rem;
+    }
+    &__docs {
+        color: rgba($green, 0.6);
+        text-decoration: none;
+        border-bottom: 1px solid rgba($green, 0.6);
     }
 }
