@@ -634,6 +634,95 @@ body {
     }
 }
 
+.delivery {
+    padding-top: 32px;
+    margin-bottom: 160px;
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 7rem;
+    }
+    &__text {
+        margin-left: 122px;
+        flex-basis: 620px;
+    }
+    &__pay {
+        flex-grow: 1;
+    }
+    &__list {
+        list-style: none;
+        font-family: $font-cormorant;
+        font-size: 3rem;
+        font-style: italic;
+        display: flex;
+        gap: 2rem;
+        padding-left: 0;
+        margin: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0.4;
+        &:hover {
+            opacity: 1;
+        }
+        &::before {
+            content: '';
+            width: 87px;
+            height: 32px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url(../images/mastercard.svg);
+                background-size: 53px 32px;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                background-image: url(../images/visa.svg);
+                background-size: 74px 23px;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url(../images/paypal.svg);
+                background-size: 87px 24px;
+            }
+        }
+    }
+}
+
+.category {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &__item {
+        flex-basis: 230px;
+        text-align: center;
+    }
+    &__link {
+        padding: 2.4rem 0;
+        border: 1px solid rgba($green, .5);
+        color: rgba($green, .5);
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 4rem;
+        display: block;
+        &:hover {
+            border: 1px solid $orange;
+            color: $orange;
+        }
+    }
+}
+
 .contact {
     padding-top: 100px;
     padding-bottom: 100px;
