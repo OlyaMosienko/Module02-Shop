@@ -645,7 +645,7 @@ body {
     }
     &__text {
         margin-left: 122px;
-        flex-basis: 620px;
+        flex-basis: 830px;
     }
     &__pay {
         flex-grow: 1;
@@ -675,24 +675,25 @@ body {
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
         &:nth-child(1) {
             &::before {
                 background-image: url(../images/mastercard.svg);
-                background-size: 53px 32px;
+                background-size: 53px 150px;
+                margin-right: -12px;
             }
         }
         &:nth-child(2) {
             &::before {
                 background-image: url(../images/visa.svg);
-                background-size: 74px 23px;
+                background-size: 74px 150px;
             }
         }
         &:nth-child(3) {
             &::before {
                 background-image: url(../images/paypal.svg);
-                background-size: 87px 24px;
+                background-size: 87px 150px;
             }
         }
     }
@@ -731,8 +732,11 @@ body {
         align-items: center;
         justify-content: space-between;
         &__text {
-            max-width: 400px;
+            max-width: 410px;
             flex-grow: 1;
+            margin-left: 13rem;
+            font-size: 1.8rem;
+            line-height: 1.5;
         }
         &__form {
             flex-basis: 589px;
