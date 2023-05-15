@@ -833,4 +833,98 @@ body {
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__logo {
+        width: 17.9rem;
+        height: 4.8rem;
+    }
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    &__item {
+        margin-bottom: 2rem;
+    }
+    &__tel {
+        font-size: 2.7rem;
+        text-decoration: none;
+        color: $green;
+        display: block;
+        margin-bottom: 3rem;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__mail {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: $green;
+        display: block;
+        margin-bottom: 3rem;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $green;
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-social {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        &__link {
+            color: $green;
+            text-decoration: none;
+            opacity: 0.8;
+            &::before {
+                content: '';
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 50px;
+                height: 50px;
+                display: block;
+                border: 2px solid $green;
+                border-radius: 100%;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &__vk {
+            &::before {
+                background-image: url(../images/vk.svg);
+                background-size: 23px 20px;
+            }
+        }
+        &__inst {
+            &::before {
+                background-image: url(../images/instagram.svg);
+                background-size: 18px 20px;
+            }
+        }
+        &__fb {
+            &::before {
+                background-image: url(../images/facebook.svg);
+                background-size: 20px 18px;
+            }
+        }
+    }
 }
