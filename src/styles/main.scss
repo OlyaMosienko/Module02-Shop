@@ -845,86 +845,71 @@ body {
     &__list {
         list-style: none;
         padding-left: 0;
-        font-size: 1.8rem;
         margin: 0;
     }
     &__item {
         margin-bottom: 2rem;
     }
-    &__tel {
-        font-size: 2.7rem;
-        text-decoration: none;
-        color: $green;
-        display: block;
-        margin-bottom: 3rem;
-        &:hover {
-            color: $orange;
-        }
-    }
-    &__mail {
-        font-size: 1.8rem;
-        text-decoration: none;
-        color: $green;
-        display: block;
-        margin-bottom: 3rem;
-        &:hover {
-            color: $orange;
-        }
-    }
     &__link {
         text-decoration: none;
         color: $green;
+        font-size: 1.8rem;
         &:hover {
             color: $orange;
         }
     }
-
-    &__text {
-        display: flex;
-        justify-content: space-between;
+    &__tel {
+        font-size: 2.7rem;
+        display: block;
+        margin-bottom: 3rem;
     }
     &-social {
         list-style: none;
         padding-left: 0;
-        margin: 0;
+        margin-top: 3rem;
+        margin-bottom: 0;
         display: flex;
         align-items: center;
-        gap: 3rem;
+        justify-content: space-between;
         &__link {
-            color: $green;
+            display: block;
+            width: 4.6rem;
+            height: 4.6rem;
+            border: 2px solid $green;
+            border-radius: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
             text-decoration: none;
             opacity: 0.8;
-            &::before {
-                content: '';
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 50px;
-                height: 50px;
-                display: block;
-                border: 2px solid $green;
-                border-radius: 100%;
-            }
             &:hover {
                 opacity: 1;
             }
         }
         &__vk {
-            &::before {
-                background-image: url(../images/vk.svg);
-                background-size: 23px 20px;
-            }
+            background-image: url(../images/vk.svg);
+            background-size: 2.3rem;
         }
         &__inst {
-            &::before {
-                background-image: url(../images/instagram.svg);
-                background-size: 18px 20px;
-            }
+            background-image: url(../images/instagram.svg);
+            background-size: 1.8rem;
         }
         &__fb {
-            &::before {
-                background-image: url(../images/facebook.svg);
-                background-size: 20px 18px;
-            }
+            background-image: url(../images/facebook.svg);
+            background-size: 1.8rem;
+        }
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        color: rgba($green, 0.6);
+        margin-top: 4rem;
+        margin-bottom: 8rem;
+    }
+    &__author {
+        text-decoration: none;
+        color: rgba($green, 0.6);
+        &:hover {
+            color: rgba($green, 1);
         }
     }
 }
