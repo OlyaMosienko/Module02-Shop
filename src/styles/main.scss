@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: #d26a22;
+$dark-orange: #cf5c0d;
 $white: #fff;
 
 $font-jost: 'Jost', sans-serif;
@@ -15,6 +16,10 @@ body {
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 
 .header {
@@ -34,6 +39,7 @@ body {
     &__link {
         text-decoration: none;
         color: $green;
+        transition: .2s;
         &:hover {
             color: $orange;
         }
@@ -42,6 +48,7 @@ body {
         text-decoration: none;
         color: $green;
         font-weight: 500;
+        transition: .2s;
         &:hover {
             color: $orange;
         }
@@ -58,6 +65,7 @@ body {
         background-size: 1.7rem 1.5rem;
         position: relative;
         border: 1px solid $orange;
+        transition: .2s;
         &:hover {
             background-color: $green;
             border: 1px solid $green;
@@ -78,6 +86,11 @@ body {
     background-size: contain;
     width: 12rem;
     height: 3.2rem;
+    &_footer {
+        flex-basis: 18rem;
+        height: 4.8rem;
+        margin-top: 0.8rem;
+    }
 }
 .container {
     max-width: 1440px;
@@ -86,10 +99,6 @@ body {
     padding-right: 15px;
 }
 .main {
-    background-image: url(../images/main.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     position: relative;
     padding-bottom: 187px;
     z-index: 0;
@@ -141,6 +150,7 @@ body {
         position: absolute;
         color: $green;
         text-align: left;
+        cursor: pointer;
         &:hover {
             .main__btn {
                 &::before {
@@ -156,6 +166,7 @@ body {
             background-color: $green;
             box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
             border-radius: 100%;
+            transition: .2s;
             position: absolute;
         }
         &_1 {
@@ -258,6 +269,11 @@ body {
     border-radius: 3.8rem;
     display: inline-block;
     border: none;
+    cursor: pointer;
+    transition: .2s;
+    &:hover {
+        background-color: $dark-orange;
+    }
     &_min {
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
@@ -266,10 +282,6 @@ body {
 }
 
 .offer {
-    background-image: url(../images/offer.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-top: 2rem;
     padding-bottom: 12.8rem;
     &__text {
@@ -294,12 +306,14 @@ body {
         background-size: cover;
         position: relative;
         z-index: 0;
+        transition: .2s;
         &_white {
             height: 520px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 4rem 3.7rem;
+            transition: .2s;
             &:hover {
                 .swiper-slide__hover {
                 height: 233px;
@@ -358,6 +372,7 @@ body {
             gap: 2rem;
             letter-spacing: 0.1rem;
             opacity: .8;
+            transition: .2s;
             &:hover {
                 opacity: 1;
             }
@@ -409,6 +424,7 @@ body {
     }
     &-button-next, &-button-prev {
         top: -60px;
+        transition: .2s;
         &:hover {
             &::after {
                 color: rgba($green, 1)
@@ -544,6 +560,7 @@ body {
         text-decoration: none;
         border-radius: 4rem;
         display: block;
+        transition: .2s;
         &:hover {
             border: 1px solid $orange;
             color: $orange;
@@ -561,6 +578,7 @@ body {
             border-radius: 2rem;
             padding: 2.7rem 3rem 3.8rem;
             box-sizing: border-box;
+            transition: .2s;
             &:hover {
                 box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
             }
@@ -612,13 +630,15 @@ body {
         background-color: transparent;
         border: none;
         text-transform: uppercase;
-        text-align: center;
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 2rem;
         letter-spacing: 0.1rem;
+        margin-top: 5.5rem;
+        margin-left: auto;
+        margin-right: auto;
         opacity: .8;
+        transition: .2s;
         &:hover {
             opacity: 1;
         }
@@ -652,6 +672,7 @@ body {
         text-decoration: none;
         border-radius: 4rem;
         display: block;
+        transition: .2s;
         &:hover {
             border: 1px solid $orange;
             color: $orange;
@@ -711,8 +732,11 @@ body {
         background-size: cover;
         background-position: center;
         opacity: 0.4;
+        transform: scale(1);
+        transition: .2s;
         &:hover {
             opacity: 1;
+            transform: scale(1.05);
         }
     }
     &__mastercard {
@@ -805,6 +829,7 @@ body {
         width: 100%;
         box-sizing: border-box;
         display: block;
+        transition: .2s;
         &:focus {
             border: 1px solid rgba($green, 1);
             outline: none;
@@ -828,19 +853,22 @@ body {
     }
 }
 
+footer {
+    border-top: 1px solid #d4d6cf;
+    padding-top: 7.9rem;
+    padding-bottom: 7rem;
+}
+
 .footer {
-    background-image: url(../images/footer.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     &__box {
         display: flex;
         justify-content: space-between;
         align-items: start;
     }
-    &__logo {
-        width: 17.9rem;
-        height: 4.8rem;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 66.5%;
     }
     &__list {
         list-style: none;
@@ -854,6 +882,7 @@ body {
         text-decoration: none;
         color: $green;
         font-size: 1.8rem;
+        transition: .2s;
         &:hover {
             color: $orange;
         }
@@ -863,53 +892,55 @@ body {
         display: block;
         margin-bottom: 3rem;
     }
-    &-social {
-        list-style: none;
-        padding-left: 0;
-        margin-top: 3rem;
-        margin-bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &__link {
-            display: block;
-            width: 4.6rem;
-            height: 4.6rem;
-            border: 2px solid $green;
-            border-radius: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            text-decoration: none;
-            opacity: 0.8;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        &__vk {
-            background-image: url(../images/vk.svg);
-            background-size: 2.3rem;
-        }
-        &__inst {
-            background-image: url(../images/instagram.svg);
-            background-size: 1.8rem;
-        }
-        &__fb {
-            background-image: url(../images/facebook.svg);
-            background-size: 1.8rem;
-        }
-    }
     &__text {
         display: flex;
         justify-content: space-between;
         color: rgba($green, 0.6);
         margin-top: 4rem;
-        margin-bottom: 8rem;
     }
     &__author {
         text-decoration: none;
         color: rgba($green, 0.6);
+        transition: .2s;
         &:hover {
             color: rgba($green, 1);
         }
+    }
+}
+
+.footer-social {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__link {
+        display: block;
+        width: 4.6rem;
+        height: 4.6rem;
+        border: 2px solid $green;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: .2s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__vk {
+        background-image: url(../images/vk.svg);
+        background-size: 2.3rem;
+    }
+    &__inst {
+        background-image: url(../images/instagram.svg);
+        background-size: 1.8rem;
+    }
+    &__fb {
+        background-image: url(../images/facebook.svg);
+        background-size: 1.8rem;
     }
 }
