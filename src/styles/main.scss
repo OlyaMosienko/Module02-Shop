@@ -8,6 +8,17 @@ $white: #fff;
 $font-jost: 'Jost', sans-serif;
 $font-cormorant: 'Cormorant', serif;
 
+$r_minmob: 320px;
+$r_mob_360: 360px; 
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+
 html {
     font-size: 10px;
 }
@@ -18,7 +29,6 @@ body {
     color: $green;
     background-image: url(../images/background.png);
     background-size: cover;
-    background-position-x: center;
     background-repeat: no-repeat;
 }
 
@@ -29,10 +39,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
+    gap: 5%;
+    @media (max-width: $r_desk_1280) {
+        gap: 3%;
+    }
     &__navigation {
         flex-grow: 1;
-        margin-left: 4rem;
+        margin-left: 4.5rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 0;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-grow: 0;
+        }
+        @media (max-width: $r_tab_900) {
+            display: none;
+        }
     }
     &__nav {
         display: flex;
@@ -40,6 +62,9 @@ body {
         margin: 0;
         padding-left: 0;
         gap: 4.8rem;
+        @media (max-width: $r_desk_hd) {
+            gap: 2.5rem;
+        }
     }
     &__link {
         text-decoration: none;
@@ -60,10 +85,13 @@ body {
         &:hover {
             color: $orange;
         }
+        @media (max-width: $r_desk_hd) {
+            display: none;
+        }
     }
     &__cart {
         display: block;
-        flex-basis: 4rem;
+        width: 4rem;
         height: 4rem;
         border-radius: 100%;
         background-color: $orange;
@@ -73,10 +101,21 @@ body {
         background-size: 1.7rem 1.5rem;
         position: relative;
         border: 1px solid $orange;
+        cursor: pointer;
         transition: .2s;
+        @media (max-width: $r_desk_hd) {
+            background-color: $white;
+            background-image: url(../images/cart-mobi.svg);
+            border: 1px solid $green;
+            opacity: .8;
+        }
         &:hover {
             background-color: $green;
             border: 1px solid $green;
+            @media (max-width: $r_desk_hd) {
+                background-color: $white;
+                opacity: 1;
+            }
         }
     }
     &__counter {
@@ -85,8 +124,60 @@ body {
         position: absolute;
         right: .7rem;
         top: .6rem;
+        @media (max-width: $r_desk_hd) {
+            color: $green;
+        }
+    }
+    &__phone, &__menu {
+        display: none;
+    }
+    &__phone {
+        @media (max-width: $r_desk_hd) {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            background-color: $white;
+            background-image: url(../images/phone.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.7rem 1.5rem;
+            border: 1px solid $green;
+            transition: .2s;
+            opacity: .8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__menu {
+        @media (max-width: $r_tab_900) {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            background-color: $white;
+            background-image: url(../images/menu.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.7rem 1.5rem;
+            border: 1px solid $green;
+            transition: .2s;
+            opacity: .8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__buttons {
+        @media (max-width: $r_desk_hd) {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
     }
 }
+
 .logo {
     display: block;
     background-image: url(../images/logo.svg);
