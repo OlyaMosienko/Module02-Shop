@@ -16,8 +16,10 @@ $r_mob_600: 600px;
 $r_tab: 768px;
 $r_tab_900: 900px;
 $r_desk: 1000px;
+$r_desk_1120: 1120px;
 $r_desk_hd: 1200px;
 $r_desk_1280: 1280px;
+$r_desk_1350: 1350px;
 
 html {
     font-size: 10px;
@@ -196,6 +198,9 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width: $r_tab) {
+        max-width: 600px;
+    }
 }
 .main {
     position: relative;
@@ -205,18 +210,40 @@ body {
         margin-left: 12rem;
         max-width: 378px;
         margin-top: 6.5rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+        }
+        @media (max-width: $r_tab) {
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 3rem;
+        }
     }
     &__link {
         margin-top: 5rem;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
     &__flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 30px;
+        @media (max-width: $r_desk_1120) {
+            padding-top: 3rem;
+            padding-bottom: 8rem;
+        }
     }
     &__text {
         padding-top: 2.5rem;
+        @media (max-width: $r_desk_1120) {
+            flex-basis: 395px;
+        }
+        @media (max-width: $r_tab) {
+            flex-basis: 100%;
+            padding-top: 0;
+        }
     }
     &__cover {
         flex-basis: 758px;
@@ -228,6 +255,22 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
+        @media (max-width: $r_desk_1350) {
+            flex-basis: 650px;
+            height: 650px;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-basis: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_1120) {
+            border: 1px solid transparent;
+            height: auto;
+            flex-basis: calc(100% - 395px);
+        }
+        @media (max-width: $r_tab) {
+            display: none;
+        }
     }
     &__line {
         width: 656px;
@@ -238,11 +281,31 @@ body {
         align-items: center;
         border: 1px solid rgba($green, 0.4);
         border-radius: 100%;
+        @media (max-width: $r_desk_1350) {
+            width: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_hd) {
+            border: 1px solid transparent;
+            width: auto;
+            height: auto;
+        }
     }
     &__image {
         width: 92%;
         border-radius: 100%;
         animation: shadow 5s infinite;
+    }
+    &__imagemobi {
+        display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 3rem;
+            animation: shadow 5s infinite;
+            border-radius: 100%;
+        }
     }
     &__btn {
         border: none;
@@ -274,6 +337,15 @@ body {
         &_1 {
             top: 42px;
             left: 62px;
+            @media (max-width: $r_desk_1350) {
+                top: 18px;
+            }
+            @media (max-width: $r_desk_hd) {
+                top: 7px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 bottom: 11px;
                 right: -36px;
@@ -282,6 +354,15 @@ body {
         &_2 {
             top: 191px;
             right: 1px;
+            @media (max-width: $r_desk_1350) {
+                top: 106px;
+            }
+            @media (max-width: $r_desk_hd) {
+                top: 54px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 bottom: 17px;
                 left: -26px;
@@ -290,6 +371,12 @@ body {
         &_3 {
             bottom: -52px;
             right: 244px;
+            @media (max-width: $r_desk_1350) {
+                bottom: -64px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 top: -22px;
                 left: 15px;
@@ -342,6 +429,15 @@ body {
     font-size: 8rem;
     margin: 0;
     line-height: 1;
+    @media (max-width: $r_desk_1280) {
+        font-size: 7rem;
+    }
+    @media (max-width: $r_desk_1120) {
+        font-size: 6rem;
+    }
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &__span {
         font-style: italic;
     }
@@ -354,11 +450,20 @@ body {
 .description {
     margin: 0;
     line-height: 1.5;
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &_size-s {
         font-size: 1.8rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 1.6rem;
+        }
     }
     &_size-m {
         font-size: 2.4rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 2.2rem;
+        }
     }
 }
 .link {
@@ -374,6 +479,9 @@ body {
     border: none;
     cursor: pointer;
     transition: .2s;
+    @media (max-width: $r_desk_1280) {
+        font-size: 1.4rem;
+    }
     &:hover {
         background-color: $dark-orange;
     }
@@ -597,8 +705,11 @@ body {
         margin-top: 8rem;
     }
     &__text {
-        margin-left: 122px;
+        margin-left: 12rem;
         flex-basis: 615px;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+        }
     }
     &__list {
         list-style: none;
@@ -807,6 +918,9 @@ body {
         margin-top: 7.6rem;
         margin-left: 12rem;
         gap: 11%;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+        }
     }
     &__text {
         flex-basis: 44%;
@@ -883,9 +997,12 @@ body {
         &__text {
             max-width: 410px;
             flex-grow: 1;
-            margin-left: 13rem;
+            margin-left: 12rem;
             font-size: 1.8rem;
             line-height: 1.5;
+            @media (max-width: $r_desk_1280) {
+                margin-left: 8rem;
+            }
         }
         &__description {
             padding-top: 6rem;
