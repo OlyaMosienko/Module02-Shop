@@ -573,6 +573,9 @@ body {
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
         box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
+        @media (max-width: $r_tab) {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -791,6 +794,9 @@ body {
 
 .counter {
     display: flex;
+    @media (max-width: $r_tab) {
+        display: none;
+    }
     &__btn {
         cursor: pointer;
         width: 50px;
@@ -947,43 +953,12 @@ body {
     }
 }
 
-.category {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    &__item {
-        flex-basis: 230px;
-        text-align: center;
-        @media (max-width: $r_tab) {
-            flex-basis: 170px;
-        }
-    }
-    &__link {
-        padding: 2.4rem 0;
-        border: 1px solid rgba($green, .5);
-        color: rgba($green, .5);
-        font-size: 1.8rem;
-        text-decoration: none;
-        border-radius: 4rem;
-        display: block;
-        transition: .2s;
-        @media (max-width: $r_tab) {
-            font-size: 1.5rem;
-            padding: 2rem 0;
-        }
-        &:hover {
-            border: 1px solid $orange;
-            color: $orange;
-        }
-    }
-}
-
 .catalog {
     padding-top: 10px;
-    margin-bottom: 110px;
+    margin-bottom: 11rem;
+    @media (max-width: $r_tab) {
+        margin-bottom: 6rem;
+    }
     &-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -995,12 +970,19 @@ body {
         @media (max-width: $r_desk_1120) {
             grid-template-columns: repeat(2, 1fr);
         }
+        @media (max-width: $r_desk_1120) {
+            margin-top: 3.5rem;
+        }
         &__item {
             border: 1px solid rgba($green, .4);
             border-radius: 2rem;
             padding: 2.7rem 3rem 3.8rem;
             box-sizing: border-box;
             transition: .2s;
+            @media (max-width: $r_tab) {
+                padding: 2rem;
+                text-align: center;
+            }
             &:hover {
                 box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
             }
@@ -1024,6 +1006,9 @@ body {
             color: $green;
             margin-top: 1.7rem;
             margin-bottom: 0;
+            @media (max-width: $r_tab) {
+                font-size: 2rem;
+            }
         }
         &__description {
             font-size: 1.6rem;
@@ -1033,16 +1018,25 @@ body {
             min-height: 61px;
             line-height: 1.5;
             max-width: 250px;
+            @media (max-width: $r_tab) {
+                font-size: 1.5rem;
+            }
         }
         &__price {
             font-size: 2.4rem;
             margin-bottom: 3rem;
             margin-top: 0;
+            @media (max-width: $r_tab) {
+                font-size: 2rem;
+            }
         }
         &__footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media (max-width: $r_tab) {
+                justify-content: center;
+            }
         }
     }
     &__btn {
@@ -1083,10 +1077,17 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap;
     margin-top: 9.5rem;
+    @media (max-width: $r_tab) {
+        margin-top: 4.5rem;
+    }
     &__item {
         flex-basis: 230px;
         text-align: center;
+        @media (max-width: $r_tab) {
+            flex-basis: 170px;
+        }
     }
     &__link {
         padding: 2.4rem 0;
@@ -1097,6 +1098,10 @@ body {
         border-radius: 4rem;
         display: block;
         transition: .2s;
+        @media (max-width: $r_tab) {
+            font-size: 1.5rem;
+            padding: 2rem 0;
+        }
         &:hover {
             border: 1px solid $orange;
             color: $orange;
@@ -1116,13 +1121,25 @@ body {
         gap: 11%;
         @media (max-width: $r_desk_1280) {
             margin-left: 8rem;
+            font-size: 1.6rem;
         }
         @media (max-width: $r_desk_1120) {
             margin-left: 4rem;
         }
+        @media (max-width: $r_tab) {
+            margin-left: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4rem;
+        }
     }
     &__text {
         flex-basis: 44%;
+        @media (max-width: $r_tab) {
+            flex-basis: 100%;
+            text-align: center;
+        }
     }
     &__description {
         margin-top: 0;
@@ -1155,6 +1172,10 @@ body {
         gap: 3rem;
         padding-left: 0;
         margin-top: 4.3rem;
+        @media (max-width: $r_tab) {
+            justify-content: center;
+            margin-top: 3rem;
+        }
     }
     &__item {
         height: 32px;
