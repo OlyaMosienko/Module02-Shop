@@ -218,11 +218,14 @@ body {
         height: 4.8rem;
         margin-top: 0.8rem;
         @media (max-width: $r_desk) {
-            height: 4rem;
+            display: none;
         }
-        @media (max-width: $r_tab_900) {
-            flex-basis: 7rem;
-            width: 15rem;
+        @media (max-width: $r_tab) {
+            display: block;
+            flex-basis: auto;
+            width: 13rem;
+            height: 3.8rem;
+            margin: 0 auto 3rem;
         }
     }
 }
@@ -801,6 +804,9 @@ body {
             width: 100%;
             height: 322px;
             text-align: center;
+            @media (max-width: $r_desk) {
+                height: 250px;
+            }
         }
         &__description {
             font-size: 1.8rem;
@@ -825,6 +831,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 5%;
         }
     }
 
@@ -920,6 +927,12 @@ body {
             width: 33px;
         }
     }
+    & + .link {
+        flex-grow: 1;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .about {
@@ -936,6 +949,10 @@ body {
         align-items: center;
         justify-content: space-between;
         margin-top: 8rem;
+        gap: 10rem;
+        @media (max-width: $r_desk) {
+            gap: 7rem;
+        }
         @media (max-width: $r_tab) {
             flex-direction: column;
             gap: 3rem;
@@ -952,8 +969,8 @@ body {
         @media (max-width: $r_desk_1120) {
             margin-left: 4rem;
         }
-        @media (max-width: $r_tab_900) {
-            flex-basis: 300px;
+        @media (max-width: $r_desk_1120) {
+            margin-left: 0;
         }
         @media (max-width: $r_tab) {
             flex-basis: 100%;
@@ -968,9 +985,12 @@ body {
         gap: 8.5rem;
         padding-left: 0;
         margin: 0;
-        @media (max-width: $r_desk_1120) {
+        @media (max-width: $r_desk_1280) {
             gap: 6rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            font-size: 2.2rem;
         }
         @media (max-width: $r_desk) {
             gap: 4rem;
@@ -1173,6 +1193,9 @@ body {
     margin-top: 9.5rem;
     @media (max-width: $r_tab) {
         margin-top: 4.5rem;
+        justify-content: center;
+        font-size: 1.4rem;
+        gap: 1rem;
     }
     &__item {
         flex-basis: 230px;
@@ -1191,8 +1214,8 @@ body {
         display: block;
         transition: .2s;
         @media (max-width: $r_tab) {
-            font-size: 1.5rem;
-            padding: 2rem 0;
+            font-size: 1.4rem;
+            padding: 1.8rem 0;
         }
         &:hover {
             border: 1px solid $orange;
@@ -1222,11 +1245,11 @@ body {
             margin-left: 4rem;
         }
         @media (max-width: $r_tab) {
-            margin-left: 0;
+            margin: 5rem auto 0;
+            min-width: 500px;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 4rem;
         }
     }
     &__text {
@@ -1309,8 +1332,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @media (max-width: $r_desk_1120) {
-            gap: 1.5rem;
+        @media (max-width: $r_desk_hd) {
+            gap: 10%;
         }
         @media (max-width: $r_tab) {
             flex-direction: column;
@@ -1332,8 +1355,10 @@ body {
             @media (max-width: $r_desk_1120) {
                 margin-left: 4rem;
             }
-            @media (max-width: $r_tab) {
+            @media (max-width: $r_desk) {
                 margin-left: 0;
+            }
+            @media (max-width: $r_tab) {
                 text-align: center;
             }
         }
@@ -1401,8 +1426,9 @@ body {
             @media (max-width: $r_desk_1280) {
                 flex-basis: 560px;
             }
-            @media (max-width: $r_desk_1120) {
-                flex-basis: 525px;
+            @media (max-width: $r_desk_1280) {
+                flex-basis: auto;
+                flex-grow: 1;
             }
         }
     }
@@ -1412,6 +1438,9 @@ body {
     padding: 3.8rem 5.2rem 4rem;
     border: 2px solid rgba($green, .4);
     border-radius: 2rem;
+    @media (max-width: $r_desk) {
+        padding: 3.2rem 3rem 4rem;
+    }
     &__title {
         font-size: 3rem;
         font-family: $font-cormorant;
@@ -1466,6 +1495,9 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: start;
+        @media (max-width: $r_desk_hd) {
+            gap: 9%;
+        }
         @media (max-width: $r_tab_900) {
             flex-direction: column;
             align-items: center;
@@ -1475,6 +1507,10 @@ footer {
         display: flex;
         justify-content: space-between;
         flex-basis: 66.5%;
+        @media (max-width: $r_desk_hd) {
+            flex-basis: auto;
+            flex-grow: 1;
+        }
         @media (max-width: $r_desk) {
             flex-basis: 73.5%;
         }
@@ -1489,17 +1525,18 @@ footer {
         list-style: none;
         padding-left: 0;
         margin: 0;
-        @media (max-width: $r_tab_900) {
-            display: flex;
-            align-items: center;
-            &:nth-child(1) {
-                justify-content: space-between;
-                gap: 6rem;
-            }
-            &:nth-child(2) {
-                flex-direction: column;
+        @media (max-width: $r_tab) {
+            margin-bottom: 3rem;
+        }
+        &:first-child {
+            @media (max-width: $r_tab) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
             }
         }
+        
     }
     &__item {
         margin-bottom: 2rem;
@@ -1525,6 +1562,8 @@ footer {
         margin-bottom: 3rem;
         @media (max-width: $r_tab) {
             text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
     }
     &__text {
@@ -1534,6 +1573,10 @@ footer {
         margin-top: 4rem;
         @media (max-width: $r_desk) {
             font-size: 1.3rem;
+        }
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+            text-align: center;
         }
     }
     &__author {
