@@ -296,6 +296,7 @@ body {
         }
         @media (max-width: $r_mob_500) {
             padding-top: 0;
+            padding-bottom: 1rem;
         }
     }
     &__text {
@@ -681,6 +682,10 @@ body {
         @media (max-width: $r_tab) {
             margin-top: 3rem;
         }
+        @media (max-width: $r_mob_360) {
+            margin: 3.6rem auto 0;
+            max-width: 250px;
+        }
     }
 }
 
@@ -697,7 +702,9 @@ body {
         padding-bottom: 6rem;
     }
     @media (max-width: $r_mob_500) {
-        min-width: 210px;
+        max-width: 210px;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -843,6 +850,9 @@ body {
             @media (max-width: $r_desk) {
                 height: 250px;
             }
+            @media (max-width: $r_mob_500) {
+                height: 104px;
+            }
         }
         &__description {
             font-size: 1.8rem;
@@ -852,10 +862,20 @@ body {
             min-height: 55px;
             max-width: 300px;
             line-height: 1.5;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+                margin-top: 0;
+                min-height: 46px;
+            }
         }
         &__price {
             font-size: 2.4rem;
             margin-bottom: 3rem;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.75rem;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
         }
         &__image {
             width: 100%;
@@ -910,6 +930,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $r_mob_500) {
+        bottom: -38px;
+    }
 }
 
 .swiper-pagination-bullet-active {
@@ -983,6 +1006,10 @@ body {
     @media (max-width: $r_tab) {
         margin-bottom: 12rem;
     }
+    @media (max-width: $r_mob_500) {
+        padding-top: 21px;
+        margin-bottom: 7rem;
+    }
     &__box {
         display: flex;
         align-items: center;
@@ -996,6 +1023,9 @@ body {
             flex-direction: column;
             gap: 3rem;
             margin-top: 3.5rem;
+        }
+        @media (max-width: $r_mob_500) {
+            gap: 5.2rem;
         }
     }
     &__text {
@@ -1035,6 +1065,10 @@ body {
             gap: 4rem;
             font-size: 2rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.75rem;
+            gap: 4.7rem;
+        }
     }
     &__item {
         display: flex;
@@ -1053,6 +1087,11 @@ body {
                 width: 70px;
                 height: 70px;
             }
+            @media (max-width: $r_mob_500) {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 1rem;
+            }
         }
         &:nth-child(1) {
             &::before {
@@ -1060,6 +1099,9 @@ body {
                 background-size: 44px 41px;
                 @media (max-width: $r_tab) {
                     background-size: 37px 34px;
+                }
+                @media (max-width: $r_mob_500) {
+                    background-size: 30px 30px;
                 }
             }
         }
@@ -1070,6 +1112,9 @@ body {
                 @media (max-width: $r_tab) {
                     background-size: 34px 34px;
                 }
+                @media (max-width: $r_mob_500) {
+                    background-size: 27px 27px;
+                }
             }
         }
         &:nth-child(3) {
@@ -1078,6 +1123,9 @@ body {
                 background-size: 45px 39px;
                 @media (max-width: $r_tab) {
                     background-size: 38px 33px;
+                }
+                @media (max-width: $r_mob_500) {
+                    background-size: 31px 31px;
                 }
             }
         }
@@ -1093,9 +1141,13 @@ body {
     &__text {
         margin-top: 4rem;
         margin-bottom: -1rem;
-    }
-    @media (max-width: $r_tab) {
-        margin-top: 3rem;
+        @media (max-width: $r_tab) {
+            margin-top: 3rem;
+        }
+        @media (max-width: $r_mob_500) {
+            max-width: 250px;
+            margin: 2.5rem auto 0;
+        }
     }
 }
 
