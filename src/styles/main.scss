@@ -663,6 +663,7 @@ body {
         }
         @media (max-width: $r_mob_360) {
             font-size: 1.25rem;
+            padding: 1.75rem;
         }
     }
 }
@@ -1138,6 +1139,9 @@ body {
     @media (max-width: $r_tab) {
         margin-bottom: 13rem;
     }
+    @media (max-width: $r_mob_500) {
+        margin-bottom: 6rem;
+    }
     &__text {
         margin-top: 4rem;
         margin-bottom: -1rem;
@@ -1157,6 +1161,9 @@ body {
     @media (max-width: $r_tab) {
         margin-bottom: 8rem;
     }
+    @media (max-width: $r_mob_500) {
+        margin-bottom: 3rem;
+    }
     &__btn {
         cursor: pointer;
         font-weight: 500;
@@ -1174,6 +1181,11 @@ body {
         margin-right: auto;
         opacity: .8;
         transition: .2s;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.25rem;
+            margin-top: 5rem;
+            gap: 1rem;
+        }
         &:hover {
             opacity: 1;
         }
@@ -1185,6 +1197,10 @@ body {
             background-image: url(../images/refresh.svg);
             background-size: contain;
             background-repeat: no-repeat;
+            @media (max-width: $r_mob_500) {
+                width: 22px;
+                height: 20px;
+            }
         }
     }
 }
@@ -1204,6 +1220,9 @@ body {
     @media (max-width: $r_tab) {
         gap: 10px;
     }
+    @media (max-width: $r_mob_500) {
+        margin-top: 2.7rem;
+    }
     &__item {
         border: 1px solid rgba($green, .4);
         border-radius: 2rem;
@@ -1214,8 +1233,17 @@ body {
             padding: 2.2rem 2rem 2.8rem;
             text-align: center;
         }
+        @media (max-width: $r_mob_500) {
+            padding: 1rem 1.75rem 1.5rem;
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        }
+    }
+    &__item:nth-child(5), &__item:nth-child(6),
+    &__item:nth-child(7), &__item:nth-child(8) {
+        @media (max-width: $r_mob_500) {
+            display: none;
         }
     }
     &__cover {
@@ -1226,6 +1254,9 @@ body {
         text-align: center;
         @media (max-width: $r_tab) {
             height: 150px;
+        }
+        @media (max-width: $r_mob_500) {
+            height: 60px;
         }
     }
     &__image {
@@ -1243,6 +1274,9 @@ body {
         @media (max-width: $r_tab) {
             font-size: 2rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.75rem;
+        }
     }
     &__description {
         font-size: 1.6rem;
@@ -1255,6 +1289,11 @@ body {
         @media (max-width: $r_tab) {
             font-size: 1.3rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.25rem;
+            margin-top: 0.75rem;
+            min-height: 52px;
+        }
     }
     &__price {
         font-size: 2.4rem;
@@ -1262,6 +1301,10 @@ body {
         margin-top: 0;
         @media (max-width: $r_tab) {
             font-size: 2rem;
+        }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
         }
     }
     &__footer {
@@ -1324,7 +1367,7 @@ body {
     @media (max-width: $r_mob_500) {
         display: block;
         text-align: center;
-        margin-top: 3.5rem;
+        margin-top: 5rem;
     }
     &.swiper-wrapper {
         gap: 1.25rem;
@@ -1372,6 +1415,9 @@ body {
     @media (max-width: $r_tab) {
         margin-bottom: 8rem;
     }
+    @media (max-width: $r_mob_500) {
+        margin-bottom: 1rem;
+    }
     &__box {
         display: flex;
         font-size: 1.8rem;
@@ -1393,6 +1439,11 @@ body {
             align-items: center;
             justify-content: center;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.5rem;
+            max-width: 275px;
+            margin: 4.2rem auto 0;
+        }
     }
     &__text {
         flex-basis: 44%;
@@ -1404,9 +1455,15 @@ body {
     &__description {
         margin-top: 0;
         margin-bottom: 2.6rem;
+        @media (max-width: $r_mob_500) {
+            margin-bottom: 2.3rem;
+        }
     }
     &__pay {
         flex-basis: 37%;
+        @media (max-width: $r_mob_500) {
+            margin-top: 2rem;
+        }
     }
     &__link {
         color: $green;
@@ -1436,6 +1493,9 @@ body {
             justify-content: center;
             margin-top: 3rem;
         }
+        @media (max-width: $r_mob_500) {
+            margin-top: 4rem;
+        }
     }
     &__item {
         height: 32px;
@@ -1453,14 +1513,23 @@ body {
     &__mastercard {
         width: 53px;
         background-image: url(../images/mastercard.svg);
+        @media (max-width: $r_mob_500) {
+            width: 38px;
+        }
     }
     &__visa {
         width: 74px;
         background-image: url(../images/visa.svg);
+        @media (max-width: $r_mob_500) {
+            width: 53px;
+        }
     }
     &__paypal {
         width: 87px;
         background-image: url(../images/paypal.svg);
+        @media (max-width: $r_mob_500) {
+            width: 63px;
+        }
     }
 }
 
@@ -1469,6 +1538,9 @@ body {
     padding-bottom: 15.4rem;
     @media (max-width: $r_tab) {
         padding-bottom: 8rem;
+    }
+    @media (max-width: $r_mob_500) {
+        padding-top: 10px;
     }
     &-box {
         display: flex;
@@ -1510,6 +1582,9 @@ body {
             @media (max-width: $r_tab) {
                 padding-top: 3.5rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
         }
         &__list {
             list-style: none;
@@ -1523,7 +1598,7 @@ body {
                 margin-top: 2rem;
             }
             @media (max-width: $r_mob_360) {
-                margin-top: 2rem;
+                margin-top: 0;
                 font-size: 1.5rem;
             }
             @media (max-width: 330px) {
@@ -1550,6 +1625,9 @@ body {
                 gap: 1rem;
                 font-size: 1.8rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
             &::before {
                 content: '';
                 background-repeat: no-repeat;
@@ -1557,18 +1635,28 @@ body {
                 width: 29px;
                 height: 30px;
                 display: block;
+                @media (max-width: $r_mob_500) {
+                    width: 18px;
+                    height: 18px;
+                }
             }
         }
         &__tel {
             &::before {
                 background-image: url(../images/tel.svg);
                 background-size: 29px 30px;
+                @media (max-width: $r_mob_500) {
+                    background-size: 18px 18px;
+                }
             }
         }
         &__mail {
             &::before {
                 background-image: url(../images/mail.svg);
                 background-size: 29px 30px;
+                @media (max-width: $r_mob_500) {
+                    background-size: 18px 18px;
+                }
             }
         }
         &__form {
@@ -1591,16 +1679,27 @@ body {
     @media (max-width: $r_desk) {
         padding: 3.2rem 3rem 4rem;
     }
+    @media (max-width: $r_mob_500) {
+        padding: 2.5rem 2rem;
+        text-align: center;
+    }
     &__title {
         font-size: 3rem;
         font-family: $font-cormorant;
         margin-top: 0;
+        @media (max-width: $r_mob_500) {
+            font-size: 2.75rem;
+        }
     }
     &__label {
         font-size: 1.2rem;
         margin-left: 0.6rem;
         margin-bottom: 1rem;
         display: block;
+        @media (max-width: $r_mob_500) {
+            text-align: left;
+            margin-left: 0;
+        }
     }
     &__input {
         border: 1px solid rgba($green, .4);
@@ -1615,6 +1714,10 @@ body {
             border: 1px solid rgba($green, 1);
             outline: none;
         }
+        @media (max-width: $r_mob_500) {
+            padding: 1.8rem 3rem;
+            margin-bottom: 1.4rem;
+        }
     }
     &__check {
         font-size: 1.2rem;
@@ -1623,9 +1726,17 @@ body {
         max-width: 360px;
         margin-top: 1.6rem;
         margin-bottom: 0;
+        @media (max-width: $r_mob_360) {
+            margin-top: 2.2rem;
+            margin-bottom: 9px;
+            font-size: 1.25rem;
+        }
     }
     &__link {
         margin-top: 1.2rem;
+        @media (max-width: $r_mob_500) {
+            margin-top: 2.2rem;
+        }
     }
     &__docs {
         color: rgba($green, 0.6);
