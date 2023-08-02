@@ -227,6 +227,9 @@ body {
             bottom: -100px;
             padding: 4px 15px;
         }
+        @media (max-width: $r_mob_600) {
+            display: none;
+        }
         &::after {
             content: '';
             border: 9px solid transparent;

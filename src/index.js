@@ -6,7 +6,7 @@ import './styles/main.scss';
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-var swiper = new Swiper(".offerSwiper", {
+  var swiper = new Swiper(".offerSwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
