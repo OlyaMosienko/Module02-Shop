@@ -78,3 +78,17 @@ var swiper = new Swiper(".offerSwiper", {
       clickable: true,
     },
   });
+
+  const links = document.querySelectorAll(".offer-smooth, .about-smooth, .trends-smooth, .catalog-smooth, .delivery-smooth, .contact-smooth");
+        for (const link of links) {
+            link.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+            document.querySelector(href).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
