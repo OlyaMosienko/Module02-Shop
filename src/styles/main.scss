@@ -1520,6 +1520,7 @@ body {
         display: block;
         text-align: center;
         margin-top: 5rem;
+        overflow-x: hidden;
     }
     & .swiper-wrapper {
         gap: 1.25rem;
