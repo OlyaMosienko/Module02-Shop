@@ -882,6 +882,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            background-size: cover;
             padding: 4rem 3.7rem;
             transition: .2s;
             @media (max-width: $r_desk_hd) {
@@ -890,6 +891,7 @@ body {
             @media (max-width: $r_mob_500) {
                 height: 240px;
                 text-align: center;
+                background-position: center;
                 padding: 2.2rem 1.7rem;
             }
             &:hover {
