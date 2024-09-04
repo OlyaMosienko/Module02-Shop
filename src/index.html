@@ -43,7 +43,11 @@
             <a href="tel:+79453425555" class="header__tel">+7 945 342 55 55</a>
             <div class="header__buttons">
                 <a href="tel:+79453425555" class="header__phone"></a>
-                <button href="#" class="header__menu"></button>
+                <button class="header__menu menu-btn">
+                    <span class="menu-btn__block">
+                        <span class="menu-btn__inner"></span>
+                    </span>
+                </button>
                 <button href="#" class="header__cart">
                     <span class="header__counter">0</span>
                 </button>
@@ -53,6 +57,32 @@
                     </div>
                     <p class="header__text">Вы добавили в корзину <a href="#" class="header__product">Молоко топленое</a></p>
                     <button type="button" class="close" onclick="document.getElementById('Notification').style.visibility='hidden'"></button>
+                </div>
+            </div>
+            <div class="mob-menu">
+                <div class="mob-menu__content">
+                    <nav class="header__navigation">
+                        <ul class="header__nav">
+                            <li class="header__item">
+                                <a href="#offer" class="header__link offer-smooth">Наша продукция</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#about" class="header__link about-smooth">О компании</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#trends" class="header__link trends-smooth">Новинки</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#catalog" class="header__link catalog-smooth">Каталог</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#delivery" class="header__link delivery-smooth">Доставка</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#contact" class="header__link contact-smooth">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
