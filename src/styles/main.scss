@@ -273,7 +273,7 @@ body {
 }
 
 .menu-btn {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -333,6 +333,9 @@ body {
             transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
             }
         }
+    }
+    @media (max-width: $r_tab_900) {
+        display: flex;
     }
 }
 
